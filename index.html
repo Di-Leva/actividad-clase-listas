@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lista de intereses</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+  </head>
+  <body class="blue-grey lighten-5">
+    <header class="teal lighten-2 grey-text text-darken-4">
+      <div class="container cabecera">
+        <p class="etiqueta">Desarrollo Frontend II · Clase 4</p>
+        <h1>Lista de intereses</h1>
+      </div>
+    </header>
+
+    <main class="container seccion-principal">
+      <div class="row">
+        <section class="col s12 l5">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Agregar un interés</span>
+              <p>Ingresá una actividad o un tema que te interese.</p>
+              <form id="formulario-interes" novalidate>
+                <div class="input-field">
+                  <i class="material-icons prefix">interests</i>
+                  <input id="interes" type="text">
+                  <label for="interes">Nuevo interés</label>
+                </div>
+                <button class="btn waves-effect waves-light teal" type="submit">
+                  Agregar <i class="material-icons right">add</i>
+                </button>
+                <button id="boton-eliminar" class="btn-flat red-text" type="button">Eliminar el último</button>
+              </form>
+              <p id="mensaje" class="mensaje" aria-live="polite"></p>
+            </div>
+          </div>
+        </section>
+
+        <section class="col s12 l7">
+          <div class="card">
+            <div class="card-content">
+              <div class="titulo-lista">
+                <span class="card-title">Mis intereses</span>
+                <span class="new badge teal" data-badge-caption="intereses"><span id="contador">0</span></span>
+              </div>
+              <ul id="lista-intereses" class="collection"></ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
